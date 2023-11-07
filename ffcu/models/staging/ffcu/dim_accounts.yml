@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: dim_accounts
+    description: Accounts Dimension, Daily Snapshot
+    columns:
+      - name: accountkey 
+        data_type: varchar 
+        description: unique dimension key for each account id + snapshot date
+        tests:
+          - not_null
+          - unique

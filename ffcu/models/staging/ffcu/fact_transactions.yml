@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: fact_transactions
+    description: ATM deposits and withdrawls
+    
+    columns:
+      - name: tran_id 
+        data_type: int
+        description: transaction id. unique
+        tests:
+          - not_null
+          - unique
+      - name: type
+        data_type: varchar
+        description: transaction type (Deposit / Withdrawl)
+      - name: transactions
+        data_type: int
+        description: factless fact for transactions
+      - name: withdrawls
+        data_type: int
+        description: a 1 if the transaction is a withdrawl, 0 otherwise
+      - name: deposits
+        data_type: int
+        description: a 1 if the transaction is a deposit, 0 otherwise
+      - name: amount
+        data_type: decimal
+        description: the amount of the transaction, signed so deposts are positive and withdrawls are negative
+      - name: positiveamount
+        data_type: decimal
+        description: the amount of the transaction always as a positive number
+      - name: distancetoatminkm
+        data_type: decimal
+        description: distnace from account home to ATM location in KM (uses haversine)
+

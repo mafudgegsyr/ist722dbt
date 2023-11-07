@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: ffcu
+    database: raw
+    schema: ffcu
+
+    tables:
+      - name: datedimension
+      
+      - name: accounts
+      - name: locations
+      - name: transactions

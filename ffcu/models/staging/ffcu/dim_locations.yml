@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: dim_locations
+    description: Locations Dimension, Daily Snapshot
+    
+    columns:
+      - name: locationkey 
+        data_type: varchar 
+        description: unique dimension key for each atm id + snapshot date
+        tests:
+          - not_null
+          - unique
