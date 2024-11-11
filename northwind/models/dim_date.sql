@@ -12,7 +12,7 @@ select
     monthname,
     dayname,
     weekday
-    from {{ source('raw','ffcu','datedimension')}}
+    from {{ source('conformed','DateDimension')}}
 
 
 
